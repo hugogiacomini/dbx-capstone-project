@@ -51,21 +51,21 @@ graph LR
         A[Raw JSON Files<br/>Volume: /order_management/raw]
     end
 
-    subgraph "Bronze - Raw Ingestion"
+    subgraph "Raw Ingestion"
         B1[bronze_customers]
         B2[bronze_products]
         B3[bronze_orders]
         B4[bronze_line_items]
     end
 
-    subgraph "Silver - Cleaned & Validated"
+    subgraph "Cleaned & Validated"
         C1[silver_customers<br/>Data Quality Checks]
         C2[silver_products<br/>Price Validation]
         C3[silver_orders<br/>FK Validation]
         C4[silver_line_items<br/>Quantity Checks]
     end
 
-    subgraph "Gold - Business Analytics"
+    subgraph "Business Analytics"
         D1[gold_order_details<br/>Enriched Order View]
         D2[gold_product_sales_monthly<br/>Sales Aggregation]
         D3[gold_order_completion_status<br/>Completion Tracking]
