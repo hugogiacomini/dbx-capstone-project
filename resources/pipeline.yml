@@ -1,0 +1,16 @@
+resources:
+  pipelines:
+    order_management_dlt:
+      name: order_management_pipeline_${bundle.target}
+      target: order_management_${bundle.target}
+      catalog: dbx_interview
+
+      libraries:
+        - notebook:
+            path: ../src/notebooks/order_management_pipeline.py
+
+      serverless: true
+
+      development: true
+      continuous: false
+      channel: CURRENT
