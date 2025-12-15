@@ -6,7 +6,7 @@
 erDiagram
     CUSTOMERS ||--o{ ORDERS : places
     ORDERS ||--|{ LINE_ITEMS : contains
-    PRODUCTS ||--o{ LINE_ITEMS : "ordered in"
+    PRODUCTS ||--o{ LINE_ITEMS : "related to"
 
     CUSTOMERS {
         string customer_id PK
